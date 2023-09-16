@@ -15,7 +15,9 @@ pthread_create(&thread_id, NULL, myThreadFun, NULL);
 pthread_join(thread_id, NULL);
 printf(myThreadFun);
 printf("\n");
+printf("thread_id= %x \n",thread_id);
+printf("myThreadFun = %x \n", myThreadFun);
 printf("After Thread\n");
 exit(0);
 }
-//myThreadFun e thread_id são ponteiros, por isso, a impressão é apenas de caracteres aleatórios
+//myThreadFun e thread_id são ponteiros, por isso, a impressão é apenas de caracteres aleatórios. Para impressão correta, utilizar %x (hexadecimal)
